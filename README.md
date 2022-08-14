@@ -15,7 +15,7 @@ TBD
 <hr/>
 
 ## Code-of-Conduct
-See the [code of conduct](code_of_conduct.md) document for more details.
+See the [code of conduct](CODE_OF_CONDUCT.md) document for more details.
 
 ## Contributing
 See the [Contributing](CONTRIBUTING.md) document for more details.
