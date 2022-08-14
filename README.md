@@ -1,28 +1,32 @@
 # Glucoreo
 
 ## About
+
 Application for glucose reading and tracking in a very simple way.
 
-
 ### Screenshots
-TBD 
 
+TBD
 
 ### Features
+
 TBD
 
 
 <hr/>
 
 ## Code-of-Conduct
+
 See the [code of conduct](CODE_OF_CONDUCT.md) document for more details.
 
 ## Contributing
+
 See the [Contributing](CONTRIBUTING.md) document for more details.
 
 <hr/>
 
 ## License
+
 ```
 Copyright 2022 Marlonlom
 
