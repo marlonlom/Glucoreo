@@ -1,0 +1,21 @@
+pluginManagement {
+  repositories {
+    gradlePluginPortal()
+    google()
+    mavenCentral()
+  }
+}
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+  repositories {
+    google()
+    mavenCentral()
+  }
+}
+
+/* Set root project name */
+rootProject.name = "Glucoreo"
+
+/* Including application modules */
+include ":mobile_app"
+project(":mobile_app").projectDir = new File(rootDir, "applications/mobile_app")
