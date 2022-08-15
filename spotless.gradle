@@ -1,11 +1,33 @@
-apply plugin: 'com.diffplug.gradle.spotless'
+apply plugin: "com.diffplug.spotless"
 
 spotless {
   kotlin {
-    target '**/*.kt'
-    ktlint("0.36.0")
+    target "**/*.kt"
+    targetExclude("$buildDir/**/*.kt")
+    targetExclude("bin/**/*.kt")
+    ktlint()
+      .editorConfigOverride(["indent_size": 2])
     trimTrailingWhitespace()
-    indentWithSpaces()
+    indentWithSpaces(2)
+    endWithNewline()
+    licenseHeaderFile(rootProject.file("spotless/copyright.txt"))
+  }
+  kotlinGradle {
+    target "*.gradle.kts"
+    ktlint()
+      .editorConfigOverride(["indent_size": 2])
+    trimTrailingWhitespace()
+    indentWithSpaces(2)
     endWithNewline()
   }
+  groovyGradle {
+    target "*.gradle", "gradle/*.gradle"
+  }
+  format "dotfiles", {
+    target ".gitignore", ".gitattributes", ".editorconfig"
+    indentWithSpaces(2)
+    trimTrailingWhitespace()
+    endWithNewline()
+  }
+
 }
