@@ -1,0 +1,10 @@
+subprojects {
+  apply plugin: "io.gitlab.arturbosch.detekt"
+
+  detekt {
+    parallel = true
+    toolVersion = "1.21.0"
+    input = files("src/main/kotlin")
+    config = files("$project.rootDir/.detekt/detekt.yml")
+  }
+}
