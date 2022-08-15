@@ -10,18 +10,13 @@ spotless {
     trimTrailingWhitespace()
     indentWithSpaces(2)
     endWithNewline()
-    licenseHeaderFile(rootProject.file("spotless/copyright.txt"))
-  }
-  kotlinGradle {
-    target "*.gradle.kts"
-    ktlint()
-      .editorConfigOverride(["indent_size": 2])
-    trimTrailingWhitespace()
-    indentWithSpaces(2)
-    endWithNewline()
+    licenseHeaderFile(".spotless/copyright.txt")
   }
   groovyGradle {
     target "*.gradle", "gradle/*.gradle"
+    trimTrailingWhitespace()
+    indentWithSpaces(2)
+    endWithNewline()
   }
   format "dotfiles", {
     target ".gitignore", ".gitattributes", ".editorconfig"
