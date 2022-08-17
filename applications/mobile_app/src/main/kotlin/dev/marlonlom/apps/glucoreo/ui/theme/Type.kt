@@ -86,55 +86,55 @@ val Typography = Typography(
     fontWeight = FontWeight.Medium,
     fontSize = 16.sp,
     lineHeight = 24.sp,
-    letterSpacing = (0.15).sp
+    letterSpacing = 0.15f.sp
   ),
   titleSmall = TextStyle(
     fontFamily = NunitoFont,
     fontWeight = FontWeight.Medium,
     fontSize = 14.sp,
     lineHeight = 20.sp,
-    letterSpacing = (0.1).sp
+    letterSpacing = 0.1f.sp
   ),
   bodyLarge = TextStyle(
     fontFamily = NunitoFont,
     fontWeight = FontWeight.Normal,
     fontSize = 16.sp,
     lineHeight = 24.sp,
-    letterSpacing = (0.5).sp
+    letterSpacing = 0.5f.sp
   ),
   bodyMedium = TextStyle(
     fontFamily = NunitoFont,
     fontWeight = FontWeight.Normal,
     fontSize = 14.sp,
     lineHeight = 20.sp,
-    letterSpacing = (0.25).sp
+    letterSpacing = 0.25f.sp
   ),
   bodySmall = TextStyle(
     fontFamily = NunitoFont,
     fontWeight = FontWeight.Normal,
     fontSize = 12.sp,
     lineHeight = 16.sp,
-    letterSpacing = (0.4).sp
+    letterSpacing = 0.4f.sp
   ),
   labelLarge = TextStyle(
     fontFamily = NunitoFont,
     fontWeight = FontWeight.Medium,
     fontSize = 14.sp,
     lineHeight = 20.sp,
-    letterSpacing = (0.1).sp
+    letterSpacing = 0.1f.sp
   ),
   labelMedium = TextStyle(
     fontFamily = NunitoFont,
     fontWeight = FontWeight.Medium,
     fontSize = 12.sp,
     lineHeight = 16.sp,
-    letterSpacing = (0.5).sp
+    letterSpacing = 0.5f.sp
   ),
   labelSmall = TextStyle(
     fontFamily = NunitoFont,
     fontWeight = FontWeight.Medium,
     fontSize = 11.sp,
     lineHeight = 16.sp,
-    letterSpacing = (0.5).sp
+    letterSpacing = 0.5f.sp
   )
 )

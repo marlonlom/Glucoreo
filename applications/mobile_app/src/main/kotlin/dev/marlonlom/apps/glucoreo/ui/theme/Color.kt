@@ -17,16 +17,33 @@ package dev.marlonlom.apps.glucoreo.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-/* app brand colors */
-val Sandy = Color(color = 0xFFFFE58A)
-val Wheat = Color(color = 0xFFFFD772)
-val VeryLightPink = Color(color = 0xFFFFEEE6)
+/* App brand colors (Dark Theme) */
+val Onion = Color(color = 0xFF4B4629)
+val Sandwisp = Color(color = 0xFFE1D27D)
+val Madras = Color(color = 0xFF4B4123)
+val WildRice = Color(color = 0xFFE3C569)
+val Tuna = Color(color = 0xFF47484C)
+val LinkWater90 = Color(color = 0xFFD5DAE5)
+
+
+/* App brand colors (Non-Dark Theme) */
+val Drover = Color(color = 0xFFFBEEA2)
+val Mikado = Color(color = 0xFF322E1B)
+val Varden = Color(color = 0xFFFDF6D0)
+val Putty = Color(color = 0xFFC8BB6F)
+val CreamBrulee = Color(color = 0xFFFDE290)
+val Bistre = Color(color = 0xFF322B17)
+val BlanchedAlmond = Color(color = 0xFFFEF0C7)
+val Laser = Color(color = 0xFFCAAF5D)
+val AliceBlue = Color(color = 0xFFF0F5FF)
+val Ebony = Color(color = 0xFF2F3033)
+val AliceBlue90 = Color(color = 0xFFF7FAFF)
+val LinkWater = Color(color = 0xFFBDC2CC)
+val FireBrick = Color(color = 0xFFB3261E)
+val Bridesmaid = Color(color = 0xFFF9DEDC)
+val BakersChocolate = Color(color = 0xFF410E0B)
 
 /* default colors */
 val Purple80 = Color(color = 0xFFD0BCFF)
 val PurpleGrey80 = Color(color = 0xFFCCC2DC)
 val Pink80 = Color(color = 0xFFEFB8C8)
-
-val Purple40 = Color(color = 0xFF6650a4)
-val PurpleGrey40 = Color(color = 0xFF625b71)
-val Pink40 = Color(color = 0xFF7D5260)

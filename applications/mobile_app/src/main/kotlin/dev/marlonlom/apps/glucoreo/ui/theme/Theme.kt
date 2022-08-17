@@ -25,31 +25,44 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.ViewCompat
 
 private val glucoreoDarkColorScheme = darkColorScheme(
-  primary = Purple80,
-  secondary = PurpleGrey80,
-  tertiary = Pink80
+  primary = Mikado,
+  onPrimary = Putty,
+  primaryContainer = Onion,
+  onPrimaryContainer = Sandwisp,
+  secondary = Bistre,
+  onSecondary = Laser,
+  secondaryContainer = Madras,
+  onSecondaryContainer = WildRice,
+  tertiary = Ebony,
+  onTertiary = LinkWater,
+  tertiaryContainer = Tuna,
+  onTertiaryContainer = LinkWater90
 )
 
 private val glucoreoLightColorScheme = lightColorScheme(
-  primary = Purple40,
-  secondary = PurpleGrey40,
-  tertiary = Pink40
-
-  /* Other default colors to override
-  background = Color(0xFFFFFBFE),
-  surface = Color(0xFFFFFBFE),
-  onPrimary = Color.White,
-  onSecondary = Color.White,
-  onTertiary = Color.White,
-  onBackground = Color(0xFF1C1B1F),
-  onSurface = Color(0xFF1C1B1F),
-  */
+  primary = Drover,
+  onPrimary = Mikado,
+  primaryContainer = Varden,
+  onPrimaryContainer = Putty,
+  secondary = CreamBrulee,
+  onSecondary = Bistre,
+  secondaryContainer = BlanchedAlmond,
+  onSecondaryContainer = Laser,
+  tertiary = AliceBlue,
+  onTertiary = Ebony,
+  tertiaryContainer = AliceBlue90,
+  onTertiaryContainer = LinkWater,
+  error = FireBrick,
+  onError = Color.White,
+  errorContainer = Bridesmaid,
+  onErrorContainer = BakersChocolate
 )
 
 @Suppress("DEPRECATION")
