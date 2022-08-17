@@ -20,20 +20,29 @@ package dev.marlonlom.apps.glucoreo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dev.marlonlom.apps.glucoreo.ui.theme.GlucoreoTheme
 
 class MainActivity : ComponentActivity() {
@@ -41,7 +50,7 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     setContent {
       GlucoreoTheme {
-        // A surface container using the 'background' color from the theme
+        SystemUiControllerColorSetting(MaterialTheme.colorScheme.primary)
         Surface(
           modifier = Modifier.fillMaxSize(),
           color = MaterialTheme.colorScheme.background
@@ -51,26 +60,51 @@ class MainActivity : ComponentActivity() {
       }
     }
   }
+
+  @Composable
+  private fun SystemUiControllerColorSetting(statusBarColor: Color) {
+    val systemUiController = rememberSystemUiController()
+    val useDarkIcons = isSystemInDarkTheme()
+    SideEffect {
+      systemUiController.setSystemBarsColor(
+        color = statusBarColor,
+        darkIcons = !useDarkIcons
+      )
+      systemUiController.setStatusBarColor(
+        color = statusBarColor,
+        darkIcons = !useDarkIcons
+      )
+    }
+  }
 }
 
 @Composable
 fun Greeting(name: String) {
-  Text(
-    text = "Hello $name!",
+  Column(
     modifier = Modifier
       .fillMaxSize()
       .padding(20.dp),
-    color = MaterialTheme.colorScheme.onSurface,
-    textAlign = TextAlign.Center,
-    fontSize = TextUnit(value = 24f, TextUnitType.Sp),
-    style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold)
-  )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-  GlucoreoTheme {
-    Greeting("Android")
+    verticalArrangement = Arrangement.Center,
+    horizontalAlignment = Alignment.CenterHorizontally
+  ) {
+    Text(
+      text = "Hello $name!",
+      modifier = Modifier.fillMaxWidth(),
+      color = MaterialTheme.colorScheme.onSurface,
+      textAlign = TextAlign.Center,
+      fontSize = TextUnit(value = 24f, TextUnitType.Sp),
+      style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold)
+    )
+    Button(
+      onClick = { /*TODO*/ },
+      colors = ButtonDefaults.buttonColors(
+        containerColor = MaterialTheme.colorScheme.tertiary,
+        contentColor = MaterialTheme.colorScheme.onTertiary
+      )
+    ) {
+      Text(
+        text = "Click"
+      )
+    }
   }
 }
