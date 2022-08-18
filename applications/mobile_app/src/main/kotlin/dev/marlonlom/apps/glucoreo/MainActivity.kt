@@ -50,7 +50,6 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     setContent {
       GlucoreoTheme {
-        SystemUiControllerColorSetting(MaterialTheme.colorScheme.primary)
         Surface(
           modifier = Modifier.fillMaxSize(),
           color = MaterialTheme.colorScheme.background
@@ -58,22 +57,6 @@ class MainActivity : ComponentActivity() {
           Greeting("Android")
         }
       }
-    }
-  }
-
-  @Composable
-  private fun SystemUiControllerColorSetting(statusBarColor: Color) {
-    val systemUiController = rememberSystemUiController()
-    val useDarkIcons = isSystemInDarkTheme()
-    SideEffect {
-      systemUiController.setSystemBarsColor(
-        color = statusBarColor,
-        darkIcons = !useDarkIcons
-      )
-      systemUiController.setStatusBarColor(
-        color = statusBarColor,
-        darkIcons = !useDarkIcons
-      )
     }
   }
 }
