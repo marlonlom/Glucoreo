@@ -63,9 +63,11 @@ private val glucoreoLightColorScheme = lightColorScheme(
 )
 
 @Composable
-private fun SystemUiControllerColorSetting(statusBarColor: Color) {
+private fun SystemUiControllerColorSetting(
+  statusBarColor: Color,
+  useDarkIcons: Boolean = isSystemInDarkTheme()
+) {
   val systemUiController = rememberSystemUiController()
-  val useDarkIcons = isSystemInDarkTheme()
   SideEffect {
     systemUiController.setSystemBarsColor(
       color = statusBarColor,
