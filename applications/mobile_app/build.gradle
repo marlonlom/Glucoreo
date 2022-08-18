@@ -1,3 +1,5 @@
+import dev.marlonlom.apps.glucoreo.buildSrc.Libs
+
 plugins {
   id "com.android.application"
   id "org.jetbrains.kotlin.android"
@@ -47,22 +49,25 @@ android {
 }
 
 dependencies {
-  implementation "androidx.activity:activity-compose:1.6.0-beta01"
-  implementation "androidx.compose.material3:material3:1.0.0-alpha16"
-  implementation "androidx.compose.ui:ui-tooling-preview:1.3.0-alpha03"
-  implementation "androidx.compose.ui:ui:1.3.0-alpha03"
-  implementation "androidx.core:core-ktx:1.8.0"
-  implementation "androidx.core:core-splashscreen:1.0.0"
-  implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
-  implementation "androidx.multidex:multidex:2.0.1"
-  implementation "com.google.accompanist:accompanist-systemuicontroller:0.25.1"
-  implementation "com.jakewharton.timber:timber:5.0.1"
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10"
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"
-  debugImplementation "androidx.compose.ui:ui-test-manifest:1.3.0-alpha03"
-  debugImplementation "androidx.compose.ui:ui-tooling:1.3.0-alpha03"
-  testImplementation "junit:junit:4.13.2"
-  androidTestImplementation "androidx.compose.ui:ui-test-junit4:1.3.0-alpha03"
-  androidTestImplementation "androidx.test.espresso:espresso-core:3.4.0"
-  androidTestImplementation "androidx.test.ext:junit:1.1.3"
+  implementation Libs.Implementation.Androidx.activityCompose
+  implementation Libs.Implementation.Androidx.material3
+  implementation Libs.Implementation.Androidx.composeUiTooling
+  implementation Libs.Implementation.Androidx.composeUi
+  implementation Libs.Implementation.Androidx.coreKtx
+  implementation Libs.Implementation.Androidx.coreSplashScreen
+  implementation Libs.Implementation.Androidx.lifecycleRuntime
+  implementation Libs.Implementation.Androidx.multidex
+  implementation Libs.Implementation.GoogleAccompanist.systemUiController
+  implementation Libs.Implementation.timber
+  implementation Libs.Implementation.Kotlin.stdlibJdk7
+  implementation Libs.Implementation.Kotlin.stdlibJdk8
+
+  debugImplementation Libs.DebugImplementation.composeUiTestManifest
+  debugImplementation Libs.DebugImplementation.composeUiTestTooling
+
+  testImplementation Libs.Test.junit
+
+  androidTestImplementation Libs.AndroidTest.uiTestJunit4
+  androidTestImplementation Libs.AndroidTest.espressoCore
+  androidTestImplementation Libs.AndroidTest.extJunit
 }

@@ -1,9 +1,11 @@
+import dev.marlonlom.apps.glucoreo.buildSrc.Plugins
+
 subprojects {
-  apply plugin: "io.gitlab.arturbosch.detekt"
+  apply plugin: Plugins.detektPluginId
 
   detekt {
     parallel = true
-    toolVersion = "1.21.0"
+    toolVersion = Plugins.detektPluginVersion
     input = files("src/main/kotlin")
     config = files("$project.rootDir/.detekt/detekt.yml")
   }
