@@ -13,14 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@file:OptIn(ExperimentalUnitApi::class)
-
 package dev.marlonlom.apps.glucoreo
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -32,22 +29,22 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import dev.marlonlom.apps.glucoreo.ui.theme.GlucoreoTheme
 
+@ExperimentalUnitApi
 class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    installSplashScreen()
     setContent {
       GlucoreoTheme {
         Surface(
@@ -61,13 +58,14 @@ class MainActivity : ComponentActivity() {
   }
 }
 
+@ExperimentalUnitApi
 @Composable
 fun Greeting(name: String) {
   Column(
     modifier = Modifier
       .fillMaxSize()
       .padding(20.dp),
-    verticalArrangement = Arrangement.Center,
+    verticalArrangement = Arrangement.SpaceBetween,
     horizontalAlignment = Alignment.CenterHorizontally
   ) {
     Text(
@@ -81,8 +79,7 @@ fun Greeting(name: String) {
     Button(
       onClick = { /*TODO*/ },
       colors = ButtonDefaults.buttonColors(
-        containerColor = MaterialTheme.colorScheme.tertiary,
-        contentColor = MaterialTheme.colorScheme.onTertiary
+        containerColor = MaterialTheme.colorScheme.secondaryContainer
       )
     ) {
       Text(

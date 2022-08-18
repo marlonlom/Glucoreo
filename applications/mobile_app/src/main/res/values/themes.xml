@@ -2,4 +2,11 @@
 <resources>
 
   <style name="Theme.Glucoreo" parent="android:Theme.Material.Light.NoActionBar" />
+
+  <style name="Theme.AppSplash" parent="Theme.SplashScreen">
+    <item name="windowSplashScreenBackground">@color/ic_launcher_background</item>
+    <item name="windowSplashScreenAnimatedIcon">@drawable/ic_glucoreo_logo</item>
+    <item name="windowSplashScreenAnimationDuration">300</item>
+    <item name="postSplashScreenTheme">@style/Theme.Glucoreo</item>
+  </style>
 </resources>

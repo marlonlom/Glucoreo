@@ -40,7 +40,8 @@ private val glucoreoDarkColorScheme = darkColorScheme(
   tertiary = Ebony,
   onTertiary = LinkWater,
   tertiaryContainer = Tuna,
-  onTertiaryContainer = LinkWater90
+  onTertiaryContainer = LinkWater90,
+  onError = Color.Black,
 )
 
 private val glucoreoLightColorScheme = lightColorScheme(
