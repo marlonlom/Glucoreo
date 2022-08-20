@@ -25,7 +25,6 @@ val WildRice = Color(color = 0xFFE3C569)
 val Tuna = Color(color = 0xFF47484C)
 val LinkWater90 = Color(color = 0xFFD5DAE5)
 
-
 /* App brand colors (Non-Dark Theme) */
 val Drover = Color(color = 0xFFFBEEA2)
 val Mikado = Color(color = 0xFF322E1B)

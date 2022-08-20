@@ -103,6 +103,7 @@ fun GlucoreoTheme(
   MaterialTheme(
     colorScheme = colorScheme,
     typography = Typography,
+    shapes = GlucoreoShapes,
     content = content
   )
 }
