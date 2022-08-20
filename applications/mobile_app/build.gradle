@@ -1,8 +1,9 @@
-import dev.marlonlom.apps.glucoreo.buildSrc.Libs
+import dev.marlonlom.apps.glucoreo.buildsrc.Libs
 
 plugins {
   id "com.android.application"
   id "org.jetbrains.kotlin.android"
+  id "kotlin-kapt"
 }
 
 android {
