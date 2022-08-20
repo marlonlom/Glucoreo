@@ -25,7 +25,8 @@ android {
 
   buildTypes {
     release {
-      minifyEnabled false
+      minifyEnabled true
+      shrinkResources true
       proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
     }
   }
@@ -52,19 +53,23 @@ android {
 dependencies {
   implementation Libs.Implementation.Androidx.activityCompose
   implementation Libs.Implementation.Androidx.material3
-  implementation Libs.Implementation.Androidx.composeUiTooling
+  implementation Libs.Implementation.Androidx.composeUiToolingPreview
   implementation Libs.Implementation.Androidx.composeUi
   implementation Libs.Implementation.Androidx.coreKtx
   implementation Libs.Implementation.Androidx.coreSplashScreen
   implementation Libs.Implementation.Androidx.lifecycleRuntime
   implementation Libs.Implementation.Androidx.multidex
+  implementation Libs.Implementation.Androidx.lifecycleViewModel
+  implementation Libs.Implementation.GMS.playServicesAuth
   implementation Libs.Implementation.GoogleAccompanist.systemUiController
   implementation Libs.Implementation.timber
   implementation Libs.Implementation.Kotlin.stdlibJdk7
   implementation Libs.Implementation.Kotlin.stdlibJdk8
 
   debugImplementation Libs.DebugImplementation.composeUiTestManifest
-  debugImplementation Libs.DebugImplementation.composeUiTestTooling
+  debugImplementation Libs.DebugImplementation.composeUiTooling
+  debugImplementation Libs.DebugImplementation.customView
+  debugImplementation Libs.DebugImplementation.customViewPoolingContainer
 
   testImplementation Libs.Test.junit
 

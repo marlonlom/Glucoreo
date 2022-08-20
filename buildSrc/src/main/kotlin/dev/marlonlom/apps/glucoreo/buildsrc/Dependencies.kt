@@ -35,12 +35,17 @@ object Libs {
     object Androidx {
       const val activityCompose = "androidx.activity:activity-compose:1.6.0-beta01"
       const val material3 = "androidx.compose.material3:material3:1.0.0-alpha16"
-      const val composeUiTooling = "androidx.compose.ui:ui-tooling-preview:1.3.0-alpha03"
-      const val composeUi = "androidx.compose.ui:ui:1.3.0-alpha03"
+      const val composeUiToolingPreview = "androidx.compose.ui:ui-tooling-preview:1.2.1"
+      const val composeUi = "androidx.compose.ui:ui:1.2.1"
       const val coreKtx = "androidx.core:core-ktx:1.8.0"
       const val coreSplashScreen = "androidx.core:core-splashscreen:1.0.0"
       const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
       const val multidex = "androidx.multidex:multidex:2.0.1"
+      const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+    }
+
+    object GMS {
+      const val playServicesAuth = "com.google.android.gms:play-services-auth:20.2.0"
     }
 
     object GoogleAccompanist {
@@ -56,8 +61,10 @@ object Libs {
   }
 
   object DebugImplementation {
-    const val composeUiTestManifest = "androidx.compose.ui:ui-test-manifest:1.3.0-alpha03"
-    const val composeUiTestTooling = "androidx.compose.ui:ui-tooling:1.3.0-alpha03"
+    const val composeUiTestManifest = "androidx.compose.ui:ui-test-manifest:1.2.1"
+    const val composeUiTooling = "androidx.compose.ui:ui-tooling:1.2.1"
+    const val customView = "androidx.customview:customview:1.2.0-alpha01"
+    const val customViewPoolingContainer = "androidx.customview:customview-poolingcontainer:1.0.0-alpha01"
   }
 
   object Test {
@@ -65,7 +72,7 @@ object Libs {
   }
 
   object AndroidTest {
-    const val uiTestJunit4 = "androidx.compose.ui:ui-test-junit4:1.3.0-alpha03"
+    const val uiTestJunit4 = "androidx.compose.ui:ui-test-junit4:1.2.1"
     const val espressoCore = "androidx.test.espresso:espresso-core:3.4.0"
     const val extJunit = "androidx.test.ext:junit:1.1.3"
   }
