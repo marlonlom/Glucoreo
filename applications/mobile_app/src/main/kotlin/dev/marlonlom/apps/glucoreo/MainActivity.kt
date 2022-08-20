@@ -23,8 +23,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -38,6 +36,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import dev.marlonlom.apps.glucoreo.ui.common.GoogleSignInButton
 import dev.marlonlom.apps.glucoreo.ui.theme.GlucoreoTheme
 
 @ExperimentalUnitApi
@@ -76,15 +75,8 @@ fun Greeting(name: String) {
       fontSize = TextUnit(value = 24f, TextUnitType.Sp),
       style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold)
     )
-    Button(
-      onClick = { /*TODO*/ },
-      colors = ButtonDefaults.buttonColors(
-        containerColor = MaterialTheme.colorScheme.secondaryContainer
-      )
-    ) {
-      Text(
-        text = "Click"
-      )
+    GoogleSignInButton {
+      println("GoogleSignInButton clicked.")
     }
   }
 }
