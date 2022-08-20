@@ -1,4 +1,4 @@
-import dev.marlonlom.apps.glucoreo.buildSrc.Plugins
+import dev.marlonlom.apps.glucoreo.buildsrc.Plugins
 
 apply plugin: Plugins.spotlessPluginId
 
@@ -7,15 +7,15 @@ spotless {
     target "**/*.kt"
     targetExclude("$buildDir/**/*.kt")
     targetExclude("bin/**/*.kt")
-    ktlint()
+    ktlint(Plugins.ktlintPluginVersion)
       .editorConfigOverride(["indent_size": 2])
     trimTrailingWhitespace()
     indentWithSpaces(2)
     endWithNewline()
-    licenseHeaderFile(".spotless/copyright.txt")
+    licenseHeaderFile(rootProject.file(".spotless/copyright.txt"))
   }
   groovyGradle {
-    target "*.gradle", "gradle/*.gradle"
+    target "**/*.gradle"
     trimTrailingWhitespace()
     indentWithSpaces(2)
     endWithNewline()
