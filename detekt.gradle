@@ -1,12 +1,10 @@
-import dev.marlonlom.apps.glucoreo.buildSrc.Plugins
+import dev.marlonlom.apps.glucoreo.buildsrc.Plugins
 
-subprojects {
-  apply plugin: Plugins.detektPluginId
+apply plugin: Plugins.detektPluginId
 
-  detekt {
-    parallel = true
-    toolVersion = Plugins.detektPluginVersion
-    input = files("src/main/kotlin")
-    config = files("$project.rootDir/.detekt/detekt.yml")
-  }
+detekt {
+  parallel = true
+  toolVersion = Plugins.detektPluginVersion
+  input = files("src/main/kotlin")
+  config = files("$project.rootDir/.detekt/detekt.yml")
 }

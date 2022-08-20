@@ -1,4 +1,5 @@
-import dev.marlonlom.apps.glucoreo.buildSrc.Plugins
+import dev.marlonlom.apps.glucoreo.buildsrc.Libs
+import dev.marlonlom.apps.glucoreo.buildsrc.Plugins
 
 buildscript {
   repositories {
@@ -23,3 +24,12 @@ plugins {
 
 apply from: "$project.rootDir/spotless.gradle"
 apply from: "$project.rootDir/detekt.gradle"
+
+subprojects {
+  /* androidx.test and hilt are forcing JUnit, 4.12. This forces them to use 4.13 */
+  configurations.configureEach {
+    resolutionStrategy {
+      force Libs.Test.junit
+    }
+  }
+}
