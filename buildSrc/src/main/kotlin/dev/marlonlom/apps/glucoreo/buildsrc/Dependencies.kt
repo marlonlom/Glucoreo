@@ -19,6 +19,10 @@ object Plugins {
   const val androidGradle = "com.android.tools.build:gradle:7.2.2"
   const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10"
   const val detektGradle = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.21.0"
+  const val daggerHilt = "com.google.dagger:hilt-android-gradle-plugin:2.38.1"
+  const val gmsGoogleServices = "com.google.gms:google-services:4.3.13"
+  const val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics-gradle:2.9.1"
+  const val firebasePerf = "com.google.firebase:perf-plugin:1.4.1"
 
   const val androidApplicationPluginId = "com.android.application"
   const val androidLibraryPluginId = "com.android.library"
@@ -42,6 +46,20 @@ object Libs {
       const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
       const val multidex = "androidx.multidex:multidex:2.0.1"
       const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+    }
+
+    object Dagger {
+      const val hiltAndroid = "com.google.dagger:hilt-android:2.38.1"
+      const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:2.38.1"
+    }
+
+    object Firebase {
+      const val bom = "com.google.firebase:firebase-bom:30.2.0"
+      const val authKtx = "com.google.firebase:firebase-auth-ktx"
+      const val analyticsKtx = "com.google.firebase:firebase-analytics-ktx"
+      const val crashlyticsKtx = "com.google.firebase:firebase-crashlytics-ktx"
+      const val firestoreKtx = "com.google.firebase:firebase-firestore-ktx"
+      const val perfKtx = "com.google.firebase:firebase-perf-ktx"
     }
 
     object GMS {

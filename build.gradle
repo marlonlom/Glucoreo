@@ -10,6 +10,10 @@ buildscript {
     classpath Plugins.androidGradle
     classpath Plugins.kotlinGradle
     classpath Plugins.detektGradle
+    classpath Plugins.daggerHilt
+    classpath Plugins.gmsGoogleServices
+    classpath Plugins.firebaseCrashlytics
+    classpath Plugins.firebasePerf
   }
 }
 

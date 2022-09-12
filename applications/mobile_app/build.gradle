@@ -4,7 +4,14 @@ plugins {
   id "com.android.application"
   id "org.jetbrains.kotlin.android"
   id "kotlin-kapt"
+  id "com.google.gms.google-services"
+  id "com.google.firebase.crashlytics"
+  id "com.google.firebase.firebase-perf"
+  id "dagger.hilt.android.plugin"
 }
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file("local.properties").newDataInputStream())
 
 android {
   compileSdk 33
@@ -21,6 +28,8 @@ android {
       useSupportLibrary true
     }
     multiDexEnabled true
+
+    buildConfigField("String", "GCP_ID", "${properties["glucoreo.gcp_id"]}")
   }
 
   buildTypes {
@@ -58,13 +67,21 @@ dependencies {
   implementation Libs.Implementation.Androidx.coreKtx
   implementation Libs.Implementation.Androidx.coreSplashScreen
   implementation Libs.Implementation.Androidx.lifecycleRuntime
-  implementation Libs.Implementation.Androidx.multidex
   implementation Libs.Implementation.Androidx.lifecycleViewModel
+  implementation Libs.Implementation.Androidx.multidex
+  implementation Libs.Implementation.Dagger.hiltAndroid
+  implementation platform(Libs.Implementation.Firebase.bom)
+  implementation Libs.Implementation.Firebase.authKtx
+  implementation Libs.Implementation.Firebase.analyticsKtx
+  implementation Libs.Implementation.Firebase.crashlyticsKtx
+  implementation Libs.Implementation.Firebase.firestoreKtx
+  implementation Libs.Implementation.Firebase.perfKtx
   implementation Libs.Implementation.GMS.playServicesAuth
   implementation Libs.Implementation.GoogleAccompanist.systemUiController
   implementation Libs.Implementation.timber
   implementation Libs.Implementation.Kotlin.stdlibJdk7
   implementation Libs.Implementation.Kotlin.stdlibJdk8
+  kapt Libs.Implementation.Dagger.hiltAndroidCompiler
 
   debugImplementation Libs.DebugImplementation.composeUiTestManifest
   debugImplementation Libs.DebugImplementation.composeUiTooling
